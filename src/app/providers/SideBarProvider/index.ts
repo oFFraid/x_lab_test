@@ -1,4 +1,4 @@
-import {useSideBar} from './lib/useSideBar';
-import SideBarProvider from './ui/SideBarProvider';
+import { useSideBar } from './lib/useSideBar'
+import SideBarProvider from './ui/SideBarProvider'
 
-export {SideBarProvider, useSideBar};
+export { SideBarProvider, useSideBar }

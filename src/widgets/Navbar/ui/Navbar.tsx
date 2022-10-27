@@ -1,13 +1,14 @@
 import classNames from 'clsx'
-import css from './Navbar.module.scss'
-import { ReactComponent as LogoIcon } from './../../../shared/assets/icons/logo.svg'
-import UserAvatar from '../../../shared/ui/UserAvatar/ui/UserAvatar'
-import { AppLink } from '../../../shared/ui/AppLink'
+
+import { useSideBar } from '../../../app/providers/SideBarProvider'
 import { AppRoutes } from '../../../shared/config/routeConfig'
 import useBreakpoint from '../../../shared/hooks/useBreakpoint'
-import { ReactComponent as BurgerIcon } from './../../../shared/assets/icons/menu_burger.svg'
+import { AppLink } from '../../../shared/ui/AppLink'
 import { Button } from '../../../shared/ui/Button/ui/Button'
-import { useSideBar } from '../../../app/providers/SideBarProvider'
+import UserAvatar from '../../../shared/ui/UserAvatar/ui/UserAvatar'
+import { ReactComponent as LogoIcon } from './../../../shared/assets/icons/logo.svg'
+import { ReactComponent as BurgerIcon } from './../../../shared/assets/icons/menu_burger.svg'
+import css from './Navbar.module.scss'
 
 interface NavbarProps {
     className?: string
@@ -30,7 +31,6 @@ export const Navbar = ({ className }: NavbarProps) => {
                 </Button>
             ) : null}
             <AppLink to={AppRoutes.MAIN} className={css.logoWrapper}>
-                {' '}
                 {!isSm ? (
                     <LogoIcon
                         width={!isMd ? 48 : 32}

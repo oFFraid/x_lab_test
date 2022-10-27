@@ -1,19 +1,12 @@
-import {useEffect, useState} from 'react';
-
+import { useEffect, useState } from 'react'
 
 export const BugButton = () => {
-    const [error, setError] = useState(false);
+    const [error, setError] = useState(false)
 
-    const throwError = () => setError((error) => !error);
+    const throwError = () => setError((error) => !error)
     useEffect(() => {
-        if (error) throw new Error();
-    }, [error]);
+        if (error) throw new Error()
+    }, [error])
 
-    return (
-        <button
-            onClick={throwError}
-        >
-            bug
-        </button>
-    );
-};
+    return <button onClick={throwError}>bug</button>
+}

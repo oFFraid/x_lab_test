@@ -1,18 +1,20 @@
-import {ButtonHTMLAttributes, FC} from 'react';
-import css from './Button.module.scss';
-import classNames from "clsx";
-import ClassNameInterface from "../../../types/ClassNameInterface";
+import classNames from 'clsx'
+import { ButtonHTMLAttributes, FC } from 'react'
 
+import ClassNameInterface from '../../../types/ClassNameInterface'
+import css from './Button.module.scss'
 
 export type ButtonTheme = 'clear' | 'outline' | 'filled' | 'shadow'
 
 export type ButtonSize = 'size_m' | 'size_l' | 'size_xl'
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, ClassNameInterface {
-    theme?: ButtonTheme;
-    isSquare?: boolean;
-    isRound?: boolean;
-    size?: ButtonSize;
+export interface ButtonProps
+    extends ButtonHTMLAttributes<HTMLButtonElement>,
+        ClassNameInterface {
+    theme?: ButtonTheme
+    isSquare?: boolean
+    isRound?: boolean
+    size?: ButtonSize
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -25,15 +27,15 @@ export const Button: FC<ButtonProps> = (props) => {
         size,
         disabled,
         ...rest
-    } = props;
+    } = props
 
     const mods: Record<string, boolean | undefined> = {
-        [css[theme || ""]]: true,
+        [css[theme || '']]: true,
         [css.square]: isSquare,
         [css.round]: isRound,
-        [css[size || ""]]: true,
+        [css[size || '']]: true,
         [css.disabled]: disabled,
-    };
+    }
 
     return (
         <button
@@ -43,5 +45,5 @@ export const Button: FC<ButtonProps> = (props) => {
         >
             {children}
         </button>
-    );
-};
+    )
+}

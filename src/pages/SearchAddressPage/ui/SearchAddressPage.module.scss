@@ -1,34 +1,4 @@
-
 .searchPage {
-
-  .searchForm {
-    display: flex;
-    gap: 1em;
-    height: 3.5em;
-    width: 100%;
-    @media only screen and (max-width: 426px) {
-      height: 2rem;
-    }
-  }
-
-  .searchField {
-    min-height: 100%;
-    flex: 1 auto;
-    line-height: 1.2rem;
-  }
-
-  .searchButton {
-    padding: 0.95em 2em 0.95em 2.3em;
-    max-height: 100%;
-    gap: 0.8em;
-    font-weight: 700;
-    font-size: 1.3em;
-    line-height: 1.6em;
-    @media only screen and (max-width: 426px) {
-      padding: 1em;
-    }
-  }
-
   .addressListWrapper {
     margin-top: 1.6em;
     padding: calc(1.2em - 0.8em) 1.2em;
@@ -39,29 +9,6 @@
   .messageSearch {
     text-align: center;
     padding-top: 2em;
-  }
-
-  @mixin addressItem() {
-    padding: 0.8em 0;
-    border-bottom: 1px solid var(--accent-color);
-  }
-
-  .addressListTitle {
-    font-weight: 700;
-    font-size: 1.3em;
-    line-height: 1.6em;
-    @include addressItem();
-  }
-
-  .addressItem {
-    @include addressItem();
-    line-height: 1.2em;
-    overflow: auto;
-    max-width: 100%;
-  }
-
-  .addressItem:last-child {
-    border: none;
   }
 }
 

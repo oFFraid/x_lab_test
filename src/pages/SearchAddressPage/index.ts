@@ -1,1 +1,1 @@
-export * as SearchAddressPage from './ui/SearchAddressPage';
+export * as SearchAddressPage from './ui/SearchAddressPage'

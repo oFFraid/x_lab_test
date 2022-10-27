@@ -1,0 +1,15 @@
+.searchForm {
+  display: flex;
+  gap: 1em;
+  height: 3.5em;
+  width: 100%;
+  @media only screen and (max-width: 426px) {
+    height: 2rem;
+  }
+}
+
+.searchField {
+  min-height: 100%;
+  flex: 1 auto;
+  line-height: 1.2rem;
+}

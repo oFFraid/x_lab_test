@@ -1,0 +1,22 @@
+@mixin addressItem() {
+  padding: 0.8em 0;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.addressListTitle {
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  @include addressItem();
+}
+
+.addressItem {
+  @include addressItem();
+  line-height: 1.2em;
+  overflow: auto;
+  max-width: 100%;
+}
+
+.addressItem:last-child {
+  border: none;
+}

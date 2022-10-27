@@ -1,1 +1,1 @@
-export * as Button from './ui/Button';
+export * as Button from './ui/Button'

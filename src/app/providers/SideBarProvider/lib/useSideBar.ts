@@ -1,11 +1,11 @@
-import {useContext, useMemo} from 'react';
-import {SideBarContext, SideBarContextProps} from './SideBarContext';
+import { useContext, useMemo } from 'react'
 
-export const useSideBar = (): Required<SideBarContextProps> & { toggle: () => void } => {
-    const {
-        isOpen = false, setOpen = () => {
-        }
-    } = useContext(SideBarContext)
+import { SideBarContext, SideBarContextProps } from './SideBarContext'
+
+export const useSideBar = (): Required<SideBarContextProps> & {
+    toggle: () => void
+} => {
+    const { isOpen = false, setOpen = () => {} } = useContext(SideBarContext)
 
     const toggle = useMemo(() => {
         return () => setOpen(!isOpen)
@@ -14,6 +14,6 @@ export const useSideBar = (): Required<SideBarContextProps> & { toggle: () => vo
     return {
         isOpen,
         setOpen,
-        toggle
+        toggle,
     }
-};
+}

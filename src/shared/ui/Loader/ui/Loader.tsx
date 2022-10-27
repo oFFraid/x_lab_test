@@ -1,11 +1,12 @@
-import classNames from 'clsx';
-import css from './Loader.module.scss';
+import classNames from 'clsx'
+
+import css from './Loader.module.scss'
 
 interface LoaderProps {
-    className?: string;
+    className?: string
 }
 
-export const Loader = ({className}: LoaderProps) => {
+export const Loader = ({ className }: LoaderProps) => {
     return (
         <div className={classNames(css['lds-spinner'], {}, [className])}>
             <div></div>
@@ -21,5 +22,5 @@ export const Loader = ({className}: LoaderProps) => {
             <div></div>
             <div></div>
         </div>
-    );
-};
+    )
+}

@@ -1,0 +1,11 @@
+.searchButton {
+  padding: 0.95em 2em 0.95em 2.3em;
+  max-height: 100%;
+  gap: 0.8em;
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  @media only screen and (max-width: 426px) {
+    padding: 1em;
+  }
+}

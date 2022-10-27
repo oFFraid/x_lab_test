@@ -1,22 +1,27 @@
-import {FC, useState} from "react";
-import {MenuItemInterface} from "../../types";
-import css from "./MenuItemList.module.scss";
-import MenuItemHeader from "../MenuItemHeader/MenuItemHeader";
-import MenuItem from "../MenuItem/MenuItem";
+import { FC, useState } from 'react'
 
-const resolveLinkPath = (childTo: string, parentTo: string) => `${parentTo}${childTo}`;
+import { MenuItemListProps } from '../../types'
+import MenuItem from '../MenuItem/MenuItem'
+import MenuItemHeader from '../MenuItemHeader/MenuItemHeader'
+import css from './MenuItemList.module.scss'
 
-const MenuItemList: FC<Required<MenuItemInterface> & { onLinkClick?: () => void }> = props => {
+const resolveLinkPath = (childTo: string, parentTo: string) =>
+    `${parentTo}${childTo}`
+
+const MenuItemList: FC<MenuItemListProps> = (props) => {
     const {
-        to: headerToPath, text, icon: Icon, children, onLinkClick = () => {
-        }
+        to: headerToPath,
+        text,
+        icon: Icon,
+        children,
+        onLinkClick = () => {},
     } = props
     const [expanded, setExpand] = useState<boolean>(
         window.location.pathname.includes(headerToPath)
-    );
+    )
     const onExpandChange = () => {
-        setExpand(expanded => !expanded);
-    };
+        setExpand((expanded) => !expanded)
+    }
 
     return (
         <div className={css.itemNestedWrapper}>
@@ -27,10 +32,9 @@ const MenuItemList: FC<Required<MenuItemInterface> & { onLinkClick?: () => void 
                 icon={Icon}
             />
 
-
-            {expanded && (
+            {expanded &&
                 children.map((item, index) => {
-                    const key = `${item.text}-${index}`;
+                    const key = `${item.text}-${index}`
 
                     return (
                         <MenuItem
@@ -41,11 +45,10 @@ const MenuItemList: FC<Required<MenuItemInterface> & { onLinkClick?: () => void 
                             className={css.itemNested}
                             to={resolveLinkPath(item.to, headerToPath)}
                         />
-                    );
-                })
-            )}
+                    )
+                })}
         </div>
-    );
+    )
 }
 
-export default MenuItemList;
+export default MenuItemList
