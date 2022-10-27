@@ -1,0 +1,12 @@
+.newsText {
+  line-height: 1.2rem;
+
+  color: #000000;
+
+  & > p {
+    margin-bottom: 1.5rem;
+  }
+  & a {
+    color: #002BC5;
+  }
+}

@@ -1,0 +1,16 @@
+:root {
+  @media only screen and (max-width: 769px) {
+    --font-size-m: 16px;
+    --modal-content-width: 300px;
+  }
+
+  @media only screen and (max-width: 426px) {
+    --font-size-m: 14px;
+    --sidebar-width: 100%;
+  }
+
+  @media only screen and (max-width: 321px) {
+    --font-size-m: 12px;
+    --modal-content-width: 230px;
+  }
+}

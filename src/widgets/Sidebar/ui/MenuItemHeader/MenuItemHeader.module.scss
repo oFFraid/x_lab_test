@@ -1,0 +1,15 @@
+.item {
+  gap: 0;
+  justify-content: center;
+}
+
+.itemButton {
+  display: flex;
+  align-items: center;
+  gap: 3.3em;
+  width: 100%;
+}
+
+.itemButtonDown {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,19 @@
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--navbar-height) - var(--content-page-gap) * 2);
+  background: var(--sidebar-color);
+  box-shadow: var(--component-shadow);
+  padding: 1.2em 0 1.2em 1.6em;
+  transition: width 0.3s ease-in-out;
+  font-weight: 600;
+
+  .title {
+    margin-bottom: 1.6em;
+    font-weight: 700;
+  }
+}
+
+

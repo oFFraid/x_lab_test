@@ -1,0 +1,9 @@
+.itemNestedWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+
+  .itemNested {
+    padding-left: calc(4em - 1.6em);
+  }
+}

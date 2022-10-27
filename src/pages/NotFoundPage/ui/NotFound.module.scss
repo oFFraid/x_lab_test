@@ -1,0 +1,21 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  padding-top: 2.5rem;
+
+  font: var(--font-l);
+}
+
+.title {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.message {
+  text-align: center;
+}

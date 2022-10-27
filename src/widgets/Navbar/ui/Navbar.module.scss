@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: var(--navbar-height);
+  padding: 0 1.6rem;
+
+  background: var(--menu-color);
+  box-shadow: var(--component-shadow);
+  color: var(--bg-color);
+  font-weight: 700;
+
+  .logoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: inherit;
+
+    @media only screen and (max-width: 769px) {
+      font-size: 1.5em;
+    }
+  }
+
+  .userActions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: inherit;
+  }
+}
+

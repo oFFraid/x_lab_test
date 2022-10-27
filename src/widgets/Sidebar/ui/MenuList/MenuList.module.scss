@@ -1,0 +1,35 @@
+.menuList {
+
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 1em 0;
+
+  & > * {
+    text-decoration: none;
+  }
+
+  .icon {
+    height: 100%;
+  }
+
+  .link {
+    opacity: 1;
+  }
+
+  .collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .toggle > * {
+      transform: none;
+    }
+
+    .link {
+      width: 0;
+      opacity: 0;
+      transition: 0.2s opacity ease-in-out;
+    }
+  }
+}
