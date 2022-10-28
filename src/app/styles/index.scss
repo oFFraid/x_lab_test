@@ -1,7 +1,7 @@
 @import './reset';
 @import './variables/global';
 @import './media';
-
+@import './fonts';
 
 html {
   font-size: 100%;
@@ -41,7 +41,6 @@ body {
 
   &::-webkit-scrollbar {
     width: 3px;
-    max-height: 127px;
   }
 
   &::-webkit-scrollbar-thumb {
